@@ -8,8 +8,12 @@ const Card: FC<CardType> = ({ character }) => {
   const { id, name, status, species, gender, origin, location, image } =
     character;
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl cursor-pointer transition-all ease-linear">
-      <img className="aspect-square object-cover" src={image} alt={name} />
+    <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl cursor-pointer transition-all ease-linear mx-auto">
+      <img
+        className="aspect-square w-full object-cover"
+        src={image}
+        alt={name}
+      />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{name}</div>
         <p className="text-gray-700 text-base">
