@@ -11,6 +11,7 @@ const Card: FC<CardType> = ({ character }) => {
     <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl cursor-pointer transition-all ease-linear mx-auto">
       <img
         className="aspect-square w-full object-cover"
+        loading="lazy"
         src={image}
         alt={name}
       />
