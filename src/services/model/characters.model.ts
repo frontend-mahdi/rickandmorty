@@ -1,3 +1,5 @@
+
+
 export interface CharactersResponse {
   data: {
     characters: {
