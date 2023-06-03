@@ -2,6 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import { Character, CharactersResponse } from "../model/characters.model";
 import { charactersQuery } from "./query/characters.query";
+import { Episode, EpisodeResponse } from "../model/episode.model";
+import { episodeQuery } from "./query/episode.query";
 
 export const charactersApi = createApi({
   reducerPath: "charactersApi",
@@ -21,7 +23,19 @@ export const charactersApi = createApi({
       transformResponse: (response: CharactersResponse) =>
         response.data.characters.results,
     }),
+    getEpisodes: builder.query<Episode[], { id: number }>({
+      query: ({ id }) => ({
+        url: "/",
+        method: "post",
+        body: {
+          query: episodeQuery,
+          variables: { id },
+        },
+      }),
+      transformResponse: (response: EpisodeResponse) =>
+        response.data.character.episode,
+    }),
   }),
 });
 
-export const { useGetCharactersQuery } = charactersApi;
+export const { useGetCharactersQuery, useGetEpisodesQuery } = charactersApi;

@@ -1,9 +1,11 @@
 import React from "react";
-import { useRoutes } from "react-router-dom";
+import { Navigate, useRoutes } from "react-router-dom";
 
 // import Layout from "./../layouts/Layout";
 import Layout from "@/layouts/Layout";
 import Main from "@/pages/Main";
+import Info from "@/pages/Info";
+import NotFound from "@/pages/NotFound";
 
 const Router = () => {
   const routes = useRoutes([
@@ -13,7 +15,20 @@ const Router = () => {
       children: [
         {
           path: "/",
+          element: <Navigate to="/characters" />,
+        },
+
+        {
+          path: "/characters",
           element: <Main />,
+        },
+        {
+          path: "/characters/:id",
+          element: <Info />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         },
       ],
     },

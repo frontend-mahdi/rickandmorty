@@ -1,14 +1,18 @@
 import React from "react";
 import { Character } from "@/services/model/characters.model";
 import { FC } from "react";
+import { Link } from "react-router-dom";
 type CardType = {
   character: Character;
 };
-const Card: FC<CardType> = ({ character }) => {
+const CharacterCard: FC<CardType> = ({ character }) => {
   const { id, name, status, species, gender, origin, location, image } =
     character;
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl cursor-pointer transition-all ease-linear mx-auto">
+    <Link
+      to={`/characters/${id}`}
+      className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl cursor-pointer transition-all ease-linear mx-auto"
+    >
       <img
         className="aspect-square w-full object-cover"
         loading="lazy"
@@ -28,7 +32,7 @@ const Card: FC<CardType> = ({ character }) => {
           <span className="font-semibold">Location:</span> {location.name}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
-export default Card;
+export default CharacterCard;

@@ -1,8 +1,10 @@
-import { useGetCharactersQuery } from "@/services/api/characters";
 import React, { useEffect, useState } from "react";
-import Card from "./components/Card";
-import Loading from "./components/Loading";
-import Error from "./components/Error";
+
+import { useGetCharactersQuery } from "@/services/api/characters";
+import Loading from "@/component/Loading";
+import Error from "@/component/Error";
+
+import Card from "./components/CharacterCard";
 
 const CharacterList = () => {
   const {
@@ -16,7 +18,7 @@ const CharacterList = () => {
     console.log(characters);
   }, [characters]);
   let Result = null;
-  if (true) Result = <Loading />;
+  if (isLoading) Result = <Loading />;
   if (isError) Result = <Error />;
   if (isSuccess)
     Result = (
