@@ -1,5 +1,6 @@
+import { Character } from "@/services/model/character.model";
 import React from "react";
-import { Character } from "@/services/model/characters.model";
+
 import { FC } from "react";
 import { Link } from "react-router-dom";
 type CardType = {

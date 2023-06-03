@@ -13,10 +13,7 @@ const CharacterList = () => {
     isSuccess,
     data: characters,
   } = useGetCharactersQuery();
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    console.log(characters);
-  }, [characters]);
+
   let Result = null;
   if (isLoading) Result = <Loading />;
   if (isError) Result = <Error />;

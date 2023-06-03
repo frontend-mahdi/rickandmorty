@@ -1,5 +1,3 @@
-
-
 export interface CharactersResponse {
   data: {
     characters: {
@@ -8,6 +6,13 @@ export interface CharactersResponse {
   };
 }
 
+export interface CharacterResponse {
+  data: {
+    character: {
+      episode: Episode[];
+    } & Character;
+  };
+}
 export interface Character {
   id: string;
   name: string;
@@ -25,4 +30,9 @@ export interface Character {
     dimension: string;
   };
   image: string;
+}
+export interface Episode {
+  name: string;
+  air_date: string;
+  episode: string;
 }
