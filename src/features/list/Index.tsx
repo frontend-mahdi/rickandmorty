@@ -4,7 +4,7 @@ import { useGetCharactersQuery } from "@/services/api/characters";
 import Loading from "@/component/Loading";
 import Error from "@/component/Error";
 
-import Card from "./components/CharacterCard";
+import List from "./components/List";
 
 const CharacterList = () => {
   const {
@@ -17,16 +17,9 @@ const CharacterList = () => {
   let Result = null;
   if (isLoading) Result = <Loading />;
   if (isError) Result = <Error />;
-  if (isSuccess)
-    Result = (
-      <div className="max-w-7xl">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 px-6">
-          {characters.map((item, index) => (
-            <Card key={index} character={item} />
-          ))}
-        </div>
-      </div>
-    );
+  if (isSuccess) {
+    Result = <List characters={characters} />;
+  }
   return Result;
 };
 export default CharacterList;

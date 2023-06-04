@@ -9,7 +9,7 @@ const Header: FC<HeaderType> = ({ character }) => {
   return (
     <>
       <div className="flex flex-row justify-between items-end flex-wrap">
-        <div className="flex flex-row gap-14 items-start flex-wrap">
+        <div className="flex flex-row gap-3 md:gap-14 items-start flex-wrap">
           <div className="flex items-center mb-4">
             <img
               src={character.image}
