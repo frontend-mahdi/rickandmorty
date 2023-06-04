@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Episode as EpisodeT } from "@/services/model/character.model";
+import { Episode as EpisodeT } from "@/models/character.model";
 import Card from "./EpisodeCard";
 
 type EpisodeType = {

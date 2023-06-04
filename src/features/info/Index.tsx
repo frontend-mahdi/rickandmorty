@@ -1,10 +1,10 @@
-import { useGetEpisodesQuery } from "@/services/api/characters";
-import React, { useEffect } from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
 
+import { useGetEpisodesQuery } from "@/services/api/characters";
 import Loading from "@/component/Loading";
 import Error from "@/component/Error";
 
-import { Link, useParams } from "react-router-dom";
 import Episode from "./components/Episode";
 import Header from "./components/Header";
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { Navigate, useRoutes } from "react-router-dom";
 
-// import Layout from "./../layouts/Layout";
 import Layout from "@/layouts/Layout";
 import Main from "@/pages/Main";
 import Info from "@/pages/Info";

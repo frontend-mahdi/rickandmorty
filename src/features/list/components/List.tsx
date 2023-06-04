@@ -1,6 +1,7 @@
-import { Character } from "@/services/model/character.model";
 import React, { FC, useState } from "react";
+import { Character } from "@/models/character.model";
 import CharacterCard from "./CharacterCard";
+
 type ListType = {
   characters: Character[];
 };

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
-import { Character } from "@/services/model/character.model";
 import { Link } from "react-router-dom";
+
+import { Character } from "@/models/character.model";
 
 type HeaderType = {
   character: Character;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { useGetCharactersQuery } from "@/services/api/characters";
 import Loading from "@/component/Loading";

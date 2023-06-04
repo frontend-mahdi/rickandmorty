@@ -4,8 +4,8 @@ import {
   Character,
   CharacterResponse,
   CharactersResponse,
-  Episode,
-} from "../model/character.model";
+} from "@/models/character.model";
+
 import { charactersQuery } from "./query/characters.query";
 import { episodeQuery } from "./query/episode.query";
 
